@@ -5,7 +5,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/tic-tac-toe-two' : ''
+  basePath: process.env.NODE_ENV === 'production' ? '/tic-tac-toe-two' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/tic-tac-toe-two/' : '',
+  trailingSlash: true,
 };
 
 export default nextConfig
