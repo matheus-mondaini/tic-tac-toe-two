@@ -1,14 +1,12 @@
-"use client"
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Slider } from '@/components/ui/slider';
 
-const TicTacToeTwoGame = () => {
+const TicTacToeGame = () => {
   const [boardSize, setBoardSize] = useState(15);
   const [gameMode, setGameMode] = useState("twoPlayers"); 
   const [showConfig, setShowConfig] = useState(true);
@@ -19,6 +17,7 @@ const TicTacToeTwoGame = () => {
   const [winningCells, setWinningCells] = useState([]);
   const [showWinDialog, setShowWinDialog] = useState(false);
   const [gameStatus, setGameStatus] = useState(""); 
+  const [hoverPosition, setHoverPosition] = useState({ row: -1, col: -1 }); 
 
   useEffect(() => {
     if (!showConfig) {
@@ -89,6 +88,7 @@ const TicTacToeTwoGame = () => {
   };
 
   const findBestMove = () => {
+    
     for (let row = 0; row < boardSize; row++) {
       for (let col = 0; col < boardSize; col++) {
         if (!board[row][col]) {
@@ -115,10 +115,12 @@ const TicTacToeTwoGame = () => {
       }
     }
 
+    
     const possibleMoves = [];
     for (let row = 0; row < boardSize; row++) {
       for (let col = 0; col < boardSize; col++) {
         if (!board[row][col]) {
+          
           let hasAdjacentMove = false;
           for (let r = Math.max(0, row - 1); r <= Math.min(boardSize - 1, row + 1); r++) {
             for (let c = Math.max(0, col - 1); c <= Math.min(boardSize - 1, col + 1); c++) {
@@ -240,14 +242,22 @@ const TicTacToeTwoGame = () => {
       <div
         key={`${row}-${col}`}
         className={`
-          w-8 h-8 border border-gray-300 flex items-center justify-center cursor-pointer
-          ${cellValue ? 'cursor-not-allowed' : 'hover:bg-gray-100'}
-          ${isWinningCell ? 'bg-green-200' : ''}
+          w-10 h-10 border-2 border-gray-400 flex items-center justify-center cursor-pointer
+          ${cellValue ? 'cursor-not-allowed bg-gray-50' : 
+            `hover:bg-blue-100 hover:border-blue-500 hover:shadow 
+             ${currentPlayer === 'X' ? 'hover:after:content-["X"] hover:after:opacity-30 hover:after:text-blue-300' : 
+                                      'hover:after:content-["O"] hover:after:opacity-30 hover:after:text-red-300'}`
+          }
+          ${isWinningCell ? 'bg-green-200 border-green-500' : ''}
+          ${row === hoverPosition.row || col === hoverPosition.col ? 'bg-gray-100' : ''}
+          transition-all duration-150 relative
         `}
         onClick={() => handleCellClick(row, col)}
+        onMouseEnter={() => setHoverPosition({ row, col })}
+        onMouseLeave={() => setHoverPosition({ row: -1, col: -1 })}
       >
-        {cellValue === "X" && <span className="text-blue-600 font-bold">X</span>}
-        {cellValue === "O" && <span className="text-red-600 font-bold">O</span>}
+        {cellValue === "X" && <span className="text-blue-600 font-bold text-xl">X</span>}
+        {cellValue === "O" && <span className="text-red-600 font-bold text-xl">O</span>}
       </div>
     );
   };
@@ -307,7 +317,7 @@ const TicTacToeTwoGame = () => {
         <CardContent>
           <div className="flex justify-center">
             <div 
-              className="grid gap-px bg-gray-300 p-px max-w-full overflow-auto" 
+              className="grid gap-1 bg-gray-200 p-2 max-w-full overflow-auto rounded-lg shadow-md" 
               style={{ 
                 gridTemplateColumns: `repeat(${boardSize}, minmax(0, 1fr))`,
               }}
@@ -353,4 +363,4 @@ const TicTacToeTwoGame = () => {
   );
 };
 
-export default TicTacToeTwoGame;
+export default TicTacToeGame;
