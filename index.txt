@@ -1,7 +1,7 @@
 1:HL["/tictactoe-game/_next/static/media/a34f9d1faa5f3315-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:HL["/tictactoe-game/_next/static/media/bb3ef058b751a6ad-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 3:HL["/tictactoe-game/_next/static/css/084709172e267703.css","style",{"crossOrigin":""}]
-0:["vRcUmN1hLWhpuWYbc7LnI",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L4",[[["$","link","0",{"rel":"stylesheet","href":"/tictactoe-game/_next/static/css/084709172e267703.css","precedence":"next","crossOrigin":""}]],"$L5"]]]]
+0:["x5zV2YYOIgQLf_u-tSMan",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L4",[[["$","link","0",{"rel":"stylesheet","href":"/tictactoe-game/_next/static/css/084709172e267703.css","precedence":"next","crossOrigin":""}]],"$L5"]]]]
 6:I[6954,[],""]
 7:I[7264,[],""]
 9:I[6297,["342","static/chunks/342-076d8593c86d20d4.js","931","static/chunks/app/page-f3b8fb2d596e6a63.js"],""]
