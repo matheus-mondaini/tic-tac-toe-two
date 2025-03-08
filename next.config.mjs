@@ -4,8 +4,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/tictactoe-game' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/tictactoe-game' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/tic-tac-toe-two' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/tic-tac-toe-two/' : '',
+  transpilePackages: ['next'],
+  trailingSlash: true,
 }
 
-export default nextConfig;
+export default nextConfig
