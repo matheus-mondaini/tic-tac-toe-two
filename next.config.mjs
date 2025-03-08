@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    output: 'export',
+    images: {
+      unoptimized: true,
+    },
+    basePath: process.env.NODE_ENV === 'production' ? '/tic-tac-toe-two' : '',
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/tic-tac-toe-two' : '',
+  }
+  
+  module.exports = nextConfig

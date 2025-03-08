@@ -28,6 +28,7 @@
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
+    "next-export-optimize-images": "^4.6.1",
     "tailwindcss": "^4"
   }
 }
