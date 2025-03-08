@@ -1,26 +1,26 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-geist-sans",
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
+  variable: "--font-geist-mono",
   display: "swap",
 });
 
 export const metadata = {
-  title: "RPG Task Manager",
-  description: "Transform suas tarefas em uma aventura de RPG",
+  title: "Jogo da Velha Personalizado",
+  description: "Jogo da Velha com tabuleiro de tamanho personalizável",
 };
 
 const getBasePath = () => {
   if (process.env.NODE_ENV === 'production') {
-    return '/task-manager';
+    return '/tictactoe-game';
   }
   return '';
 };
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
         {children}
       </body>
