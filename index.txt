@@ -1,7 +1,7 @@
 1:HL["/tic-tac-toe-two/_next/static/media/a34f9d1faa5f3315-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:HL["/tic-tac-toe-two/_next/static/media/bb3ef058b751a6ad-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 3:HL["/tic-tac-toe-two/_next/static/css/5924bfff792ddd74.css","style",{"crossOrigin":""}]
-0:["6DcZ5bG8Nysgyu4nhn89y",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L4",[[["$","link","0",{"rel":"stylesheet","href":"/tic-tac-toe-two/_next/static/css/5924bfff792ddd74.css","precedence":"next","crossOrigin":""}]],"$L5"]]]]
+0:["sGgT31kYkz2WXr_pMNerR",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L4",[[["$","link","0",{"rel":"stylesheet","href":"/tic-tac-toe-two/_next/static/css/5924bfff792ddd74.css","precedence":"next","crossOrigin":""}]],"$L5"]]]]
 6:I[6954,[],""]
 7:I[7264,[],""]
 9:I[6297,["342","static/chunks/342-95293291a308d44b.js","931","static/chunks/app/page-0ecbd50f055552f6.js"],""]
